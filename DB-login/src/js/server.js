@@ -4,11 +4,11 @@ const bodyParser = require('body-parser');
 const { Pool } = require('pg');
 
 const app = express();
-const port = 3000;
+const port = 8829;
 
 // Configuração do banco
 const pool = new Pool({
-  user: 'SEU_USUARIO',
+  user: 'postgre',
   host: 'localhost',
   database: 'NOME_DO_BANCO',
   password: 'SUA_SENHA',
@@ -17,6 +17,10 @@ const pool = new Pool({
 
 app.use(cors());
 app.use(bodyParser.json());
+
+app.get('/', (req, res) => {
+  res.send('API de autenticação está rodando!');
+});
 
 // Rota de registro
 app.post('/api/register', async (req, res) => {
@@ -65,3 +69,4 @@ app.post('/api/login', async (req, res) => {
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
 });
+
