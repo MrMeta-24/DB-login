@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineGuide</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script defer src="src/js/main.js"></script>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header id="inicio">
+        <button onclick="toggleAside()">Menu</button>
+        <h1>CineGuide</h1>
+        <button id="logoutBtn" style="display: none;">Logout</button>
+    </header>
+
+    <aside id="asside">
+        <button class="fechar-btn" onclick="fecharAside()">X</button>
+        <div>
+            <a href="homePage.html">Inicio</a>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+        </div>
+    </aside>
+
+    <main>
+        <div class="container">
+            <div class="form-container" id="loginForm">
+                <h2>Login</h2>
+                <form id="login">
+                    <div class="input-group">
+                        <label for="loginEmail">Email:</label>
+                        <input type="email" id="loginEmail" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="loginPassword">Senha:</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    <button type="submit">Entrar</button>
+                </form>
+                <p>Não tem uma conta? <span class="toggle-link" onclick="toggleForm()">Cadastre-se aqui</span></p>
+            </div>
+
+            <div class="form-container hidden" id="registerForm">
+                <h2>Cadastro</h2>
+                <form id="register">
+                    <div class="input-group">
+                        <label for="registerUsername">Usuário:</label>
+                        <input type="text" id="registerUsername" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="registerEmail">Email:</label>
+                        <input type="email" id="registerEmail" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="registerPassword">Senha:</label>
+                        <input type="password" id="registerPassword" required>
+                    </div>
+                    <button type="submit">Registrar</button>
+                </form>
+                <p>Já tem uma conta? <span class="toggle-link" onclick="toggleForm()">Faça login aqui</span></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <a href="https://github.com/MrMeta-24">Meu github</a>
+        </div>
+    </footer>
+</body>
+</html>
